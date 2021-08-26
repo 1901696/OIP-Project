@@ -1,0 +1,22 @@
+# LED + PUMP + FAN Testing
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(13, OUTPUT); // FAN
+  pinMode(12, OUTPUT); // Pump
+  pinMode(11, OUTPUT); // LED 
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH); // FAN
+  digitalWrite(12, HIGH); // Pump
+  digitalWrite(11, HIGH); // LED 
+  Serial.println("ON");
+  delay(5000); // Wait for 5000 millisecond(s)
+  digitalWrite(13, LOW); // FAN
+  digitalWrite(12, LOW); // Pump
+  digitalWrite(11, LOW); // LED
+  Serial.println("OFF");
+  delay(5000); // Wait for 5000 millisecond(s)
+}
