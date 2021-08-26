@@ -1,0 +1,14 @@
+#USB Fan Testing 
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(13, OUTPUT); // Fan
+}
+
+void loop() 
+{  
+	digitalWrite(13, HIGH); // Fan ON (DRYING)
+	Serial.println("ON"); 
+	digitalWrite(13, HIGH); // Fan OFF (NOT DRYING)
+	Serial.println("OFF"); 
+}
