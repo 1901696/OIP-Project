@@ -1,0 +1,14 @@
+USB Fan
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(12, OUTPUT); // Pump
+}
+
+void loop() {  
+	digitalWrite(12, HIGH); // Pump on (WASHING)
+	Serial.println("ON"); 
+	digitalWrite(12, LOW); // Pump off (WASHING)
+	Serial.println("OFF"); 
+}
