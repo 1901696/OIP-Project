@@ -1,0 +1,18 @@
+#testing of rspberrypi and arduino 
+
+void setup() {
+  Serial.begin(9600);
+}
+void loop() {  
+  
+  if (Serial.available() > 0) {  
+  
+    String data = (Serial.readStringUntil('\n'));  
+    
+    if (data.equals("Washing")) {  
+    Serial.println("Hello from Arduino!); 
+    }
+    else  ((data.equals("Drying")) {  
+    Serial.println("Bye from Arduino!); 
+  }
+}
