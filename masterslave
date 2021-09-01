@@ -58,22 +58,22 @@ void loop() {
 void washing ()
 {
   // Start of Operation (WASHING)
-  delay (5000);
-  Myservo.write(90);
-  Serial.println("Closing Lid\n");
-  delay (3000);
+  delay (5000); // provide buffer time
+  Myservo.write(90); // servomotor to simulate closing
+  Serial.println("Closing Lid\n"); 
+  delay (3000); // provide time to close
   Serial.println("Lid Closed and Secured\n"); 
   
   Serial.println("Job Operation Starts\n"); 
   Serial.println("Process 1: Washing Starts");
-  delay (2000);      
+  delay (2000);      // provide buffer time
   digitalWrite(13, LOW); // Fan off (WASHING)
   digitalWrite(11, LOW); // LED Light Strips off
   digitalWrite(9, LOW);  // Green LED off (In Process)
   digitalWrite(12, HIGH); // Pump on (WASHING)
   digitalWrite(10, HIGH); // Red LED ON (In Process)
       
-  delay(20000); // Wait for x min (WASHING)
+  delay(20000); // Wait for 20000ms (WASHING)
   Serial.println("Process 1: Washing Completed\n");
         
 }
